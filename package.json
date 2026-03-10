@@ -1,0 +1,38 @@
+{
+  "name": "social-media-downloader-api",
+  "version": "1.0.0",
+  "description": "A production-ready Social Media Downloader API supporting TikTok, Instagram, Facebook, and YouTube",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "setup": "node src/setup.js",
+    "build": "node src/setup.js",
+    "render-build": "pip install yt-dlp && npm install"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "which": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "keywords": [
+    "social-media",
+    "downloader",
+    "yt-dlp",
+    "tiktok",
+    "instagram",
+    "youtube",
+    "facebook"
+  ],
+  "author": "",
+  "license": "MIT"
+}

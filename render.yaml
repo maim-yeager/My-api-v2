@@ -1,0 +1,16 @@
+# render.yaml — Render deployment config
+
+services:
+  - type: web
+    name: social-media-downloader-api
+    env: node
+    plan: free
+    buildCommand: apt-get install -y ffmpeg && pip install yt-dlp && npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
+    autoDeploy: true
